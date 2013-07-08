@@ -26,6 +26,7 @@ Documentation - https://github.com/muaz-khan/WebRTC-Experiment/tree/master/Recor
 
 	    var width = config.width || 320,
                 height = config.height || 240;
+	    console.log('video width, height: " + width + ", " + height);
 
             video.width = canvas.width = width;
             video.height = canvas.height = height;
