@@ -24,10 +24,12 @@ Documentation - https://github.com/muaz-khan/WebRTC-Experiment/tree/master/Recor
 
             console.log('started recording video frames');
 
-            video.width = canvas.width = 320;
-            video.height = canvas.height = 240;
+	    var width = video.width || config.width || 320,
+                height = video.width || config.height || 240;
 
-            var height = 240, width = 320;
+            canvas.width = width;
+            canvas.height = height;
+
 
             frames = [];
 
@@ -56,8 +58,8 @@ Documentation - https://github.com/muaz-khan/WebRTC-Experiment/tree/master/Recor
 
             console.log('started recording GIF frames');
 
-            video.width = canvas.width = video.videoWidth || 320;
-            video.height = canvas.height = video.videoHeight || 240;
+            video.width = canvas.width = config.width || video.videoWidth || 320;
+            video.height = canvas.height = config.height || video.videoHeight || 240;
 
             var height = canvas.height,
                 width = canvas.width;
