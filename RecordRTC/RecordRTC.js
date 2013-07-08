@@ -24,11 +24,11 @@ Documentation - https://github.com/muaz-khan/WebRTC-Experiment/tree/master/Recor
 
             console.log('started recording video frames');
 
-	    var width = video.width || config.width || 320,
-                height = video.width || config.height || 240;
+	    var width = config.width || 320,
+                height = config.height || 240;
 
-            canvas.width = width;
-            canvas.height = height;
+            video.width = canvas.width = width;
+            video.height = canvas.height = height;
 
 
             frames = [];
